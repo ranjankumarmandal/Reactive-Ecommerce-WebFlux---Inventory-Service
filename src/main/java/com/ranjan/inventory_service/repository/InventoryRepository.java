@@ -1,4 +1,4 @@
 package com.ranjan.inventory_service.repository;
 
-public interface InventoryRepository {
+public interface InventoryRepository extends ReactiveCrudRepository<> {
 }
