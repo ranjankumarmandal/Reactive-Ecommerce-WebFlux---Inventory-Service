@@ -1,4 +1,4 @@
 package com.ranjan.inventory_service.service;
 
-public class InventoryServiceImpl {
+public class InventoryServiceImpl implements InventoryService{
 }
