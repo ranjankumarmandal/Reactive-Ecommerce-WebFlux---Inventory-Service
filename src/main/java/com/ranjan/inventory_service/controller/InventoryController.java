@@ -28,4 +28,11 @@ public class InventoryController {
         return inventoryService.getInventoryByProductId(productId);
     }
 
+    @GetMapping("/check")
+    public Mono<Boolean> checkStock(
+            @RequestParam Long productId,
+            @RequestParam Long quantity) {
+
+        return inventoryService.isInStock(productId, quantity);
+    }
 }
