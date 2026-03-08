@@ -23,5 +23,9 @@ public class InventoryController {
         return inventoryService.getAllInventory();
     }
 
+    @GetMapping("/{productId}")
+    public Mono<Inventory> getInventory(@PathVariable Long productId) {
+        return inventoryService.getInventoryByProductId(productId);
+    }
 
 }
