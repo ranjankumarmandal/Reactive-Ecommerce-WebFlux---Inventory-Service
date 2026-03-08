@@ -17,4 +17,11 @@ public class InventoryController {
     public Mono<Inventory> addInventory(@RequestBody Inventory inventory) {
         return inventoryService.saveInventory(inventory);
     }
+
+    @GetMapping
+    public Flux<Inventory> getAllInventory() {
+        return inventoryService.getAllInventory();
+    }
+
+
 }
