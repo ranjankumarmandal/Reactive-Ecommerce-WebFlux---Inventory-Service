@@ -2,11 +2,15 @@ package com.ranjan.inventory_service.service;
 
 import com.ranjan.inventory_service.entity.Inventory;
 import com.ranjan.inventory_service.repository.InventoryRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+@Service
+@RequiredArgsConstructor
 public class InventoryServiceImpl implements InventoryService{
-    private InventoryRepository inventoryRepository;
+    private final InventoryRepository inventoryRepository;
 
     @Override
     public Mono<Inventory> saveInventory(Inventory inventory) {
